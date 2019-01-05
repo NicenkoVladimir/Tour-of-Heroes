@@ -8,8 +8,10 @@
 	#messageList {
 		display:inline-block;
 		margin:auto;
+		width:100%;
+		text-align:center;
 	}	
-	
+
 	#heroesList tr td:first-child {
 		width:50px;
 	}

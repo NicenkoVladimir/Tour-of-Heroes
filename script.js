@@ -29,6 +29,9 @@ $(document).ready(function() {
 	$('#heroes').on('click', showHeroesList);
 	$('#dashboard').on('click', showDashboard);
 	$('#addNewHero').on('click', addNewHero);
+	$searchHero.on('change', function() {
+		$searchHero.val('')
+	});
 	
 
 	/* -------- виджет autocomplete input -------------*/
@@ -39,11 +42,11 @@ $(document).ready(function() {
 				source.push(val.name);
 			}
 		});
+		
 		$searchHero.autocomplete( {
 			source: source,
 			delay:100,
-			select: getHero,
-			close: function() {window.setTimeout(function() {$searchHero.val('');},3000)}
+			select: getHero			
 		});
 	}
 	autocomplete(); 
@@ -106,14 +109,15 @@ $(document).ready(function() {
 				<button class='btn btn-link'>${val.name}</button></div>
 				</div>`);
 			}
+		
 		});
 		$('body').delegate('button.btn-link','click', getHero);
 	}
 	
 	
 	function sendMessage(message) {
-		$messageList.append(`<div>${message} : ${timeNow()}  
-		&nbsp<button class='close'><span>&times</span></button></div>`); 
+		$messageList.append(`<div class='col-md-4 col-md-offset-4'>${message} : ${timeNow()}  
+		&nbsp<button class='close col-md-1'><span>&times</span></button></div>`); 
 		if (!$messageList.is(':empty')) {
 				$('#clearMessages').css('display','block');
 		}
@@ -160,6 +164,7 @@ $(document).ready(function() {
 			$newHeroName.val(null);
 			$heroesData.push({id:newId,name:newHero});
 			sendMessage(`${newHero} with id [${newId}] was created`);
+			$('#addHero').prop('disabled',true);
 			showHeroesList();
 			closeHero ();
 			autocomplete(); 
