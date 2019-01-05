@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title>Tour of Herous</title>
+	<script src='heroes.json'></script>
+	<link rel='stylesheet' href='styles.css'>
+	<link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/ui-lightness/jquery-ui.css">
+ <link rel=stylesheet href='css/bootstrap.css'> 
+</head>
+<body align='center'>
+	<h1 class='text-primary'>Tour of heroes</h1>
+	<button id='dashboard' class='btn btn-primary' disabled>Dashboard</button>
+	<button id='heroes' class='btn btn-primary'>Heroes</button>
+	<button class='btn btn-primary' id='addNewHero'>Add New Hero</button>
+	<div id='data'>	</div>
+	<div id='foundHero'></div>
+	<h3><small>Messages</small></h3>
+	<hr width=60%>
+	<button class='btn btn-default btn-sm' id='clearMessages'>Clear All Messages</button>
+	<div id='messageList'>
+	</div>
+	
+	<!-- ---------block of heroesList---------- -->
+
+	<table class='table table-hover text-info' id='heroesList'>
+		<caption>My heroes</caption>
+		<thead style="font-weight:bold">
+			<tr>
+				<td>Id</td>
+				<td>Name</td>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+	<!-- ------------- -->
+	
+	<!-- ---------block of dashboard---------- -->
+		<div  id="dasboardList">
+			<h3 class='text-info'>Top Heroes</h3>
+			<div id='topHeroes'>
+			</div>
+			<div class='form-group '>
+				<label for='searchHero'>Find your Hero</label>
+				<input type='text' placeholder='search' class='form-control' id='searchHero'>
+			</div>
+		</div>
+	<!-- ------------- -->
+	
+	<!-- ------Create new Hero  -->
+	<div class='form-inline' id="newHeroForm">
+		<h3 class='text-info'><small>Add New Hero</small></h3>
+		<label class='text-primary'>Id :</label>
+		<input style="width:200px" class='form-control' id='newHeroName' value='' placeholder='enter hero name'>
+		<button class='btn btn-default' disabled id='addHero'>add</button>
+		<button class='btn btn-default' id='closeHero'>close</button>
+	</div>
+	<!-- ----------------- -->
+
+	
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.11.2/jquery-ui.min.js"></script>
+	<script src ='js/bootstrap.min.js'></script>
+	<script src="script.js"></script>
+</body>
+</html>
