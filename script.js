@@ -191,6 +191,7 @@ $(document).ready(function() {
 				$heroesData[index].name=null;
 			}
 		});
+		$('#heroes').prop('disabled',true);
 		showHeroesList();
 		closeHero ();
 		autocomplete();
