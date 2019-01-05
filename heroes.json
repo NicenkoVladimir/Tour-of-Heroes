@@ -1,0 +1,32 @@
+var heroesData = [ 
+		{ 
+			"id":1,
+			"name":"Mr.Nice"
+			},
+		{ 
+			"id":2,
+			"name":"Narco"
+			},
+		{ 
+			"id":3,
+			"name":"Bombasto"
+			},
+		{ 
+			"id":4,
+			"name":"Magneta"
+			},
+		{ 
+			"id":5,
+			"name":"Batman"
+			},
+		{ 
+			"id":6,
+			"name":"Spiderman"
+			},
+		{ 
+			"id":7,
+			"name":"Superman"
+			}
+		
+]
+		

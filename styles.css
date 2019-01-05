@@ -1,0 +1,47 @@
+	#heroesList {
+		text-align:center;
+		width:50%; 
+		margin:auto;
+		display:none;
+	}
+	
+	#messageList {
+		display:inline-block;
+		margin:auto;
+	}	
+	
+	#heroesList tr td:first-child {
+		width:50px;
+	}
+	
+	
+	#heroesList tr td:last-child {
+		width:300px;
+	}
+	
+	#searchHero {
+		margin:auto;
+		width:300px;
+	}
+	
+	#clearMessages {
+		display:none;
+		margin:auto;
+	}
+	
+	#addNewHero, #newHeroForm {
+		display:none;
+	}
+	
+	#topHeroes {
+		margin:auto;
+	}
+	
+	div.topHeroes  {
+		width:150px;
+		height:150px;
+		padding:10px;
+		margin:5px;
+		display: inline-block;
+		border: 1px solid;
+	}
